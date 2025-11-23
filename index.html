@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arina-durochka</title>
+     <link rel="stylesheet" href="style.css">
+       <link rel="icon" href="favicon.png" type="image/png">
+     <style>
+       body {
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #F6E1D3;
+    color: #4B3832;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.hero {
+    background-color: #FAD4C0;
+    padding: 30px 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.829);
+    max-width: 90%;
+}
+
+.compliments-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 18px;
+    background: #E07B6C;
+    color: #4B3832;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+.compliments-button:hover {
+    background: #D85D4D;
+}
+
+#compliments {
+    display: none;
+}
+.compliments-list {
+    margin-top: 15px;
+    padding-left: 0;
+    list-style: none;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+#compliments:checked ~ .compliments-list {
+    opacity: 1;
+    max-height: 500px;
+}
+.compliments-list li {
+    margin: 8px 0;
+    background: #F5C1B0;
+    padding: 8px 12px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    color: #4B3832;
+}
+
+.photos {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.photos img {
+    width: 150px; 
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s;
+}
+.photos img:hover {
+    transform: scale(1.05);
+}
+
+@media only screen and (max-width: 430px) {
+    .hero {
+        padding: 20px 15px;
+    }
+    .compliments-button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+    .compliments-list li {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+    .photos img {
+        width: 80px;
+        height: 80px;
+    }
+    h1 {
+        font-size: 18px;
+    }
+    p {
+        font-size: 14px;
+    }
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background: #FAD4C0; 
+    padding: 10px 0;
+    font-size: 14px;
+    color: #4B3832;
+}
+     </style>
+</head>
+<body>
+   <section class="hero">
+    <h1>порой мне так не хватает идей чем заняться, и тут подумав, я вспомнил, что таким образом могу поднять тебе улыбку</h1>
+    <p>иногда достаточно одного доброго слова, чтобы стало легче. так вот пусть этим добрым словом станет это</p>
+ 
+    <label for="compliments" class="compliments-button">Нажми сюда😉</label>
+    <input type="checkbox" id="compliments">
+   
+    <ul class="compliments-list">
+        <li>ты делаешь мир ярче</li>
+        <li>в тебе есть энергия, даже когда ты сама этого не чувствуешь</li>
+        <li>рядом с тобой всегда теплее</li>
+        <li>ты вдохновляешь</li>
+        <li>спасибо, что ты есть</li>
+    </ul>
+
+    <div class="photos">
+        <img src="foto1.jpg" alt="photo1">
+        <img src="foto2.jpg" alt="photo2">
+        <img src="foto3.jpg" alt="photo3"> 
+        <img src="foto4.jpg" alt="photo4">
+        <img src="foto5.jpg" alt="photo5">
+    </div>
+</section>
+<footer>
+  <p>Иконка: <a href="https://ru.freepik.com/icon/letter_9567727#fromView=search&page=1&position=0&uuid=c38f8d40-7a4e-46da-a45b-e420d6a3ef77" target="_blank" rel="noopener noreferrer">Aswell Studio / Freepik</a></p>
+</footer>
+</body>
+</html>
